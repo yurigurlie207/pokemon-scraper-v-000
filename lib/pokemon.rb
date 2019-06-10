@@ -11,7 +11,8 @@ class Pokemon
     @@all << self
   end
 
-  def
+  def self.find
+  end
 
   def self.all
     @all
