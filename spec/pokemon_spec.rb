@@ -22,7 +22,7 @@ describe "Pokemon" do
   describe ".save" do
     it 'saves an instance of a pokemon with the correct id' do
       Pokemon.save("Pikachu", "electric", @db)
-  
+
       pikachu_from_db = @db.execute("SELECT * FROM pokemon WHERE name = 'Pikachu'")
       expect(pikachu_from_db).to eq([[1, "Pikachu", "electric"]])
     end
@@ -32,7 +32,7 @@ describe "Pokemon" do
     it 'finds a pokemon from the database by their id number and returns a new Pokemon object' do
       # The find method creates a new Pokemon after selecting their row from the database by their id number.
       Pokemon.save("Pikachu", "electric", @db)
-  
+
       pikachu_from_db = Pokemon.find(1, @db)
       expect(pikachu_from_db.id).to eq(1)
       expect(pikachu_from_db.name).to eq("Pikachu")
