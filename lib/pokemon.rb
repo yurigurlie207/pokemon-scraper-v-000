@@ -1,8 +1,10 @@
 class Pokemon
+
   def initialize()
   end
 
-  def self.all?
+  def self.all
+    @all
   end
 
   def self.save()
