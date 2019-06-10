@@ -6,6 +6,7 @@ class Pokemon
     @id = id
     @name = name
     @type = type
+    @@all << self
 
   end
 
