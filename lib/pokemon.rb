@@ -9,7 +9,7 @@ class Pokemon
     @all
   end
 
-  def self.save()
+  def self.save(id, name, type db)
   end
 
 end
