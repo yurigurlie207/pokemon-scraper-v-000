@@ -21,8 +21,8 @@ class Pokemon
     @all
   end
 
-  def self.save(name, type, db)
-      db.execute("INSERT INTO pokemon (name, type) VALUES (?, ?)", name, type)
+  def self.save(name, type, hp, db)
+      db.execute("INSERT INTO pokemon (name, type, hp) VALUES (?, ?)", name, type, hp)
   end
 
   def alter_hp(new_hp, db)
